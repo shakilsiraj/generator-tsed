@@ -31,7 +31,8 @@
     "npm": ">= 4.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1 && jest",
+    "test": "jest",
+    "debug-generator": "yo tsed",
     "prepublishOnly": "nsp check",
     "pretest": "eslint .",
     "precommit": "lint-staged"
@@ -45,8 +46,9 @@
     "url": "https://github.com/shakilsiraj/generator-tsed/issues"
   },
   "dependencies": {
-    "yeoman-generator": "^2.0.1",
     "chalk": "^2.1.0",
+    "yeoman-generator": "^2.0.1",
+    "yo": "^2.0.5",
     "yosay": "^2.0.1"
   },
   "jest": {

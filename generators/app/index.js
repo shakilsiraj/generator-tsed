@@ -6,9 +6,9 @@ const yosay = require('yosay');
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
-    this.log(
-      yosay(`Welcome to the bedazzling ${chalk.red('generator-tsed')} generator!`)
-    );
+    // this.log(
+    //   yosay(`Welcome to the bedazzling ${chalk.red('generator-tsed')} generator!`)
+    // );
 
     const prompts = [
       {
