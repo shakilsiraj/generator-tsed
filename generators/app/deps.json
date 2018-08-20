@@ -1,29 +1,25 @@
 {
-    "main": {
-        "dependencies": [
-            "@tsed/core",
-            "@tsed/common",
-            "express@4",
-            "body-parser",
-            "http-status-codes",
-            "ts-node",
-            "winston"
-        ],
-        "devDependencies": [
-            "@types/express",
-            "@types/jest",
-            "typescript",
-            "jest",
-            "prettier",
-            "ts-jest"
-        ]
-    },
-    "swagger": {
-        "dependencies": [
-            "@tsed/swagger"
-        ],
-        "devDependencies": [
-            "@types/swagger-schema-official"
-        ]
-    }
+  "main": {
+    "dependencies": [
+      "@tsed/core",
+      "@tsed/common",
+      "express@4",
+      "body-parser",
+      "http-status-codes",
+      "ts-node",
+      "winston"
+    ],
+    "devDependencies": [
+      "@types/express",
+      "@types/jest",
+      "typescript",
+      "jest",
+      "prettier",
+      "ts-jest"
+    ]
+  },
+  "swagger": {
+    "dependencies": ["@tsed/swagger"],
+    "devDependencies": ["@types/swagger-schema-official"]
+  }
 }

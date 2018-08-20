@@ -34,8 +34,7 @@
     "test": "jest",
     "debug-generator": "yo tsed",
     "prepublishOnly": "nsp check",
-    "pretest": "eslint .",
-    "precommit": "lint-staged"
+    "pretest": "eslint ."
   },
   "repository": {
     "type": "git",
