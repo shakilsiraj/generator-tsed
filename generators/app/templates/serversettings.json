@@ -1,0 +1,12 @@
+{
+    "env": "development",
+    <% if (httpPort) { %> "port": <%= httpPort %>, <% } %>
+    "debug": false,
+    <% if (httpsPort) { %> "httpsPort": <%= httpsPort %>, <% } %>
+    <% if (mountPoint) { %>
+    "mount": {
+        "<%= mountPoint %>": "${rootDir}/controllers/**/*.ts" // support ts with ts-node then fallback to js
+    },
+    <% } %>
+    "componentsScan": []
+}
