@@ -123,6 +123,8 @@ module.exports = class extends Generator {
       this.destinationPath('source/serversettings.json'),
       values
     );
+    this.config.set('server', "source/server");
+    this.config.save();
   }
 
   preWrite() {
