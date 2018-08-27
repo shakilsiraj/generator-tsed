@@ -33,8 +33,7 @@
   "scripts": {
     "test": "jest",
     "debug-generator": "yo tsed",
-    "prepublishOnly": "nsp check",
-    "~pretest": "eslint ."
+    "prepublishOnly": "nsp check"
   },
   "repository": {
     "type": "git",

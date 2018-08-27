@@ -123,6 +123,13 @@ module.exports = class extends Generator {
       this.destinationPath('source/serversettings.json'),
       values
     );
+    if (this.props.vsCodeSettings){
+      this.fs.copy(
+        this.templatePath('.vscode'),
+        this.destinationPath('.vscode')
+      );
+    }
+
     this.config.set('server', "source/server");
     this.config.save();
   }

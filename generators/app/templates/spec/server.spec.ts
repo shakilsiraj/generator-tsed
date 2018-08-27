@@ -17,9 +17,9 @@ describe("Server", () => {
         });
     <% } %>
 
-    <% if (httpPort) { %>
+    <% if (mountPoint) { %>
         it('should be using <%= mountPoint %> for controllers mounting', () => {
-            expect(appSettings.get('mountPoint')).toBe(<%= mountPoint %>);
+        expect(appSettings.get('mount')['<%= mountPoint %>']).toBeDefined();
         });
     <% } %>
 

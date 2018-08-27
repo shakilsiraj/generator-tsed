@@ -5,7 +5,7 @@
     <% if (httpsPort) { %> "httpsPort": <%= httpsPort %>, <% } %>
     <% if (mountPoint) { %>
     "mount": {
-        "<%= mountPoint %>": "${rootDir}/controllers/**/*.ts" // support ts with ts-node then fallback to js
+        "<%= mountPoint %>": "${rootDir}/controllers/**/*.ts"
     },
     <% } %>
     "componentsScan": []
