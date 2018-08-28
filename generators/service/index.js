@@ -46,6 +46,20 @@ module.exports = class extends Generator {
       values
     );
 
+    /* Check serversettings.json and update if required */
+    const serverSettingsPath = this.destinationPath("source/serversettings.json");
+    const serverSettings = require(serverSettingsPath);
+
+    let configFound = false;
+    serverSettings.componentsScan.forEach(component => {
+      if (component.indexOf('/services/') > -1) {
+        configFound = true;
+      }
+    });
+    if (!configFound) {
+      serverSettings.componentsScan.push("${rootDir}/services/**/**.ts");
+      this.fs.writeJSON(serverSettingsPath, serverSettings);
+    }
   }
 
 };
