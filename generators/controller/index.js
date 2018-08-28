@@ -2,6 +2,7 @@
 const Generator = require('yeoman-generator');
 const path = require('path');
 const _ = require('lodash');
+const utils = require('../Utils');
 
 module.exports = class extends Generator {
 
@@ -14,10 +15,10 @@ module.exports = class extends Generator {
 
     const destControllerPath = this.destinationPath(`source/controllers/${this.options.controllerName}`);
     const destControllerSpecPath = this.destinationPath(`spec/controllers/${this.options.controllerName}`);
-    const controllerRelativePath = path.relative(destControllerSpecPath, destControllerPath);
+    const controllerRelativePath = utils.getUnixStylePath(path.relative(destControllerSpecPath, destControllerPath));
 
     const serverPath = this.destinationPath(this.config.get('server'));
-    const serverRelativePath = path.relative(destControllerSpecPath, serverPath);
+    const serverRelativePath = utils.getUnixStylePath(path.relative(destControllerSpecPath, serverPath));
 
     const controller = this.options.controllerName.split('/').pop();
 
@@ -26,6 +27,7 @@ module.exports = class extends Generator {
       controllerClassName: _.capitalize(controller),
       controllerClassVariableName: _.camelCase(controller),
       serverRelativePath: serverRelativePath,
+      serverClassName: this.config.get('serverClass'),
       controllerRelativePath: controllerRelativePath
     }
 

@@ -131,6 +131,7 @@ module.exports = class extends Generator {
     }
 
     this.config.set('server', "source/server");
+    this.config.set('serverClass', "ExpressServer");
     this.config.save();
   }
 
