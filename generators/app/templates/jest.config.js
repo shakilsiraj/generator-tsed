@@ -1,6 +1,6 @@
 module.exports = {
     "transform": {
-        "^.+\\.ts?$": "ts-jest"
+        "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(/spec/.*|(\\.|/)(test|spec))\\.ts?$",
     "moduleFileExtensions": [
@@ -11,5 +11,9 @@ module.exports = {
         "json",
         "node"
     ],
-    "collectCoverage": true
+    "collectCoverage": true,
+    "verbose": true,
+    "transformIgnorePatterns": [
+        "/node_modules/(?!@tsed/testing).+\\.js$"
+    ]
 }
